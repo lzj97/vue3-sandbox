@@ -41,7 +41,7 @@ module.exports = {
         exclude:/node_modules/
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude:/node_modules/
       },
@@ -56,6 +56,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".js",".vue"]
+    extensions: [".js",".jsx",".vue"]
   }
 }
