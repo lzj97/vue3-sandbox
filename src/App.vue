@@ -1,15 +1,21 @@
 <template>
-  <div>
-    <h1>Root Page</h1>
-  </div>
+  <h1>Root Component</h1>
+  <HelloWorld :text="text" />
 </template>
 
-<script>
-import {defineComponent} from 'vue';
+<script lang="ts">
 
+import {defineComponent, ref} from 'vue';
+import HelloWorld from '@/components/HelloWorld'
 export default defineComponent({
+  components:{
+    HelloWorld
+  },
   setup(){
-
+    const text = ref<string>('hello')
+    return {
+      text
+    }
   }
 })
 </script>

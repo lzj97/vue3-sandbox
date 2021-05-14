@@ -2,7 +2,7 @@
   "name": "sandbox-vue3",
   "version": "1.0.0",
   "description": "a Vue3 sandbox.",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "scripts": {
     "serve": "webpack server",
     "build": "webpack"
@@ -24,6 +24,9 @@
     "vue-loader": "^16.1.1",
     "webpack": "^5.10.1",
     "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "@vue/babel-plugin-jsx": "^1.0.6",
+    "ts-loader": "^9.1.2",
+    "typescript": "^4.2.4"
   }
 }
