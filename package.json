@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "serve": "webpack server",
-    "build": "webpack"
+    "build": "webpack",
+    "eslint": "eslint src/**/*"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +28,10 @@
     "webpack-dev-server": "^3.11.2",
     "@vue/babel-plugin-jsx": "^1.0.6",
     "ts-loader": "^9.1.2",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "eslint": "^7.26.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0"
   }
 }
