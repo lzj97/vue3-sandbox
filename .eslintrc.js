@@ -20,5 +20,6 @@ module.exports = {
     ],
     rules: {
         // https://eslint.org/docs/rules/
+        "@typescript-eslint/no-unused-vars": 0
     }
 };

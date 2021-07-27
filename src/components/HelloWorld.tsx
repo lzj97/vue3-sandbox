@@ -1,12 +1,12 @@
-import {defineComponent, PropType} from 'vue';
+import { defineComponent, PropType } from 'vue'
 export default defineComponent({
-  props:{
-    text:{
-      type:String as PropType<string>,
-      required:true
-    }
+  props: {
+    text: {
+      type: String as PropType<string>,
+      required: true,
+    },
   },
-  setup(props){
+  setup(props) {
     return () => <h3>{props.text}</h3>
-  }
+  },
 })

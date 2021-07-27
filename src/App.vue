@@ -4,18 +4,17 @@
 </template>
 
 <script lang="ts">
-
-import {defineComponent, ref} from 'vue';
+import { defineComponent, ref } from 'vue'
 import HelloWorld from '@/components/HelloWorld'
 export default defineComponent({
-  components:{
-    HelloWorld
+  components: {
+    HelloWorld,
   },
-  setup(){
-    const text = ref<string>('hello')
+  setup() {
+    const text = ref<string>('hello world')
     return {
-      text
+      text,
     }
-  }
+  },
 })
 </script>

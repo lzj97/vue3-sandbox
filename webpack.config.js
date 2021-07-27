@@ -7,37 +7,37 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry:path.resolve(__dirname, 'src/index.ts'),
-  output:{
-    path:path.resolve(__dirname, './dist'),
+  entry: path.resolve(__dirname, 'src/index.ts'),
+  output: {
+    path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename:'index.js'
+    filename: 'index.js'
   },
   devServer: {
-    historyApiFallback:true,
+    historyApiFallback: true,
     port: 9000,
-    open:true
+    open: true
   },
-  stats:{
-    assets:false,
-    modules:false
+  stats: {
+    assets: false,
+    modules: false
   },
-  plugins:[
+  plugins: [
     new HtmlWebpackPlugin({
-      template:path.resolve(__dirname, './index.html'),
-      inject:false
+      template: path.resolve(__dirname, './index.html'),
+      inject: false
     }),
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: true,
-      __VUE_PROD_DEVTOOLS__:false
+      __VUE_PROD_DEVTOOLS__: false
     }),
   ],
-  module:{
-    rules:[
+  module: {
+    rules: [
       {
         test: /\.tsx?$/,
-        use:[
+        use: [
           'babel-loader',
           {
             loader: 'ts-loader',
@@ -51,27 +51,27 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        exclude:/node_modules/
+        exclude: /node_modules/
       },
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
-        exclude:/node_modules/
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
-        use: ['style-loader','css-loader'],
+        use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/, 
+        test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
         loader: "file-loader"
       }
     ]
   },
   resolve: {
-    extensions: [".js",".jsx",'.ts','.tsx',".vue"],
-    alias:{
-      '@':path.resolve(__dirname, 'src')
+    extensions: [".js", ".jsx", '.ts', '.tsx', ".vue"],
+    alias: {
+      '@': path.resolve(__dirname, 'src')
     }
   }
 }
